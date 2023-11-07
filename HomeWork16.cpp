@@ -70,7 +70,7 @@ int main() {
 	const int size2 = 6;
 	int arr2[size2];
 	std::cin >> n;
-	if (n > 100000 && n < 1000000) {
+	if (n >= 100000 && n < 1000000) {
 		for (int i = 0; i < size2; i++) {
 			arr2[i] = n % 10;
 			n /= 10;
