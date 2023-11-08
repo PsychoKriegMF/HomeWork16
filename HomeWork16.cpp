@@ -68,14 +68,13 @@ int main() {
 	std::cout << "Введите шестизначное число -> ";
 	int n;
 	const int size2 = 6;
-	int arr2[size2];
+	int arr2[size2]{};
 	std::cin >> n;
 	if (n >= 100000 && n < 1000000) {
-		for (int i = 0; i < size2; i++) {
+		for (int i = size2 - 1; i >= 0; i--) {
 			arr2[i] = n % 10;
 			n /= 10;
 		}
-	std::reverse(arr2, arr2 + size2); // В задаче не сказанно как именно должен заполнятся массив, пусть будет так...
 	std::cout << "Получился массив: { ";
 	for (int i = 0; i < size2; i++) {
 			std::cout << arr2[i] << ", ";
@@ -84,6 +83,7 @@ int main() {
 	}
 	else
 		std::cout << "Ошибка ввода!\n\n";
+	
 	
 
 
